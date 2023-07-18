@@ -165,7 +165,7 @@
                             <a class="nav-link " href="{{ route('message.index') }}" aria-haspopup="true"
                                 aria-expanded="false">
                                 <i class="fa fa-envelope"></i>
-                                <span class="notification">{!! Helepers::countMassage() !!}</span>
+                                <span class="notification">{{ Helepers::countMassage() }}</span>
                             </a>
 
                         </li>
