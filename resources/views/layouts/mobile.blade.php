@@ -312,7 +312,7 @@
         $('#preloader').fadeOut('slow', function() {
             $(this).remove();
         });
-    }, 1cod00);
+    }, 100);
     </script>
     @yield('script')
 </body>

@@ -156,20 +156,15 @@
 
             <!-- Navbar Header -->
             <nav class="navbar navbar-header navbar-expand-lg">
-
                 <div class="container-fluid">
-
                     <ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
-
                         <li class="nav-item dropdown hidden-caret">
                             <a class="nav-link " href="{{ route('message.index') }}" aria-haspopup="true"
                                 aria-expanded="false">
                                 <i class="fa fa-envelope"></i>
                                 <span class="notification">{{ Helepers::countMassage() }}</span>
                             </a>
-
                         </li>
-
                         <li class="nav-item dropdown hidden-caret">
                             <a class="profile-pic" href="" aria-expanded="false">
                                 <div class="avatar-sm">
@@ -178,16 +173,13 @@
                                 </div>
                             </a>
                         </li>
-
                     </ul>
                 </div>
             </nav>
             <!-- End Navbar -->
         </div>
-
         <!-- Sidebar -->
         <div class="sidebar">
-
             <div class="sidebar-background"></div>
             <div class="sidebar-wrapper scrollbar-inner">
                 <div class="sidebar-content">
