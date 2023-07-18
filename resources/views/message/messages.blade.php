@@ -201,7 +201,7 @@
                                         <a href="{{route('message.client_message',$item->id)}}">
                                             <div class="message-avatar">
                                                 <i class="fa fa-user" style="font-size:35px"></i>
-                                                <span class="badge badge-success">{{ Helepers::countMassageClient($item->id) }}</span>
+                                                <span class="badge badge-success">{!! Helepers::countMassageClient($item->id) !!}</span>
                                             </div>
                                             <div class="message-body">
                                                 <div class="message-body-heading">

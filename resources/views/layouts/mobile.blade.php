@@ -198,7 +198,7 @@
                                     <i class="fas fa-home"></i>
                                     <p>مراسلة الفني</p>
                                     <span
-                                        class="badge badge-count">{{ Helepers::countMassageClient(session()->get('client')->id) }}</span>
+                                        class="badge badge-count">{!! Helepers::countMassageClient(session()->get('client')->id) !!}</span>
                                 </a>
                             </li>
                             {{-- <li class="nav-item ">
