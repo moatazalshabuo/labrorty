@@ -82,17 +82,12 @@
                                 @enderror
                             </div>
                         </div>
-
-
-
                         <div class="form-group">
                             <label for="phone" class="col-form-label text-md-end">رقم الهاتف</label>
-
                             <div class="">
                                 <input id="phone" type="phone"
                                     class="form-control @error('phone') is-invalid @enderror" placeholder="رقم الهاتف"
                                     name="phone" value="{{ old('phone') }}" required autocomplete="phone">
-
                                 @error('phone')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -103,7 +98,6 @@
                         <div class="form-group">
                             <label>موقع السكن </label>
                             <input type="text" name="address" class="form-control">
-
                         </div>
                         <button type="submit" class="btn btn-primary">حفظ البيانات</button>
                     </form>

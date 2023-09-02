@@ -35,8 +35,8 @@
 
         /* font-family: 'Lateef', serif; */
         body * {
-            font-family: font-family: 'Droid Arabic Kufi', serif;
-            ;
+        font-family: 'Droid Arabic Kufi', serif;
+
         }
 
         #preloader {
@@ -120,6 +120,8 @@
             }
         }
     </style>
+        <link rel="stylesheet" href="{{ URL::asset('assets/font-awesome-4.7.0/css/font-awesome.min.css') }}">
+
     @yield('css')
 </head>
 
@@ -214,7 +216,7 @@
                     <ul class="nav">
                         <li class="nav-item active">
                             <a href="{{ route('home') }}">
-                                <i class="fas fa-home"></i>
+                                <i class="fa fa-home"></i>
                                 <p>الرئيسية</p>
                                 <span class="badge badge-count">5</span>
                             </a>
@@ -222,13 +224,13 @@
                         @if (Auth::user()->hasRole('المسؤول') || Auth::user()->hasRole('الاداري'))
                             <li class="nav-section">
                                 <span class="sidebar-mini-icon">
-                                    <i class="fa fa-ellipsis-h"></i>
+                                    {{-- <i class="fa fa-users"></i> --}}
                                 </span>
                                 <h4 class="text-section">المستخدمين</h4>
                             </li>
                             <li class="nav-item">
                                 <a data-toggle="collapse" href="#base">
-                                    <i class="fas fa-layer-group"></i>
+                                    <i class="fa fa-users"></i>
                                     <p> المستخدمن</p>
                                     <span class="caret"></span>
                                 </a>

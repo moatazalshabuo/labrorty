@@ -35,12 +35,12 @@ class ClientController extends Controller
             "phone.unique"=>"رقم الهاتف موجود مسبقا"
         ]);
 
-        Client::create([
+        $client =  Client::create([
             'name'=>$request->name,
             "phone"=>$request->phone,
             "address"=>$request->address
         ]);
-        return redirect()->back()->with("success","تم الحفظ بنجاح");
+        return redirect()->back()->with(["success"=>"تم الحفظ بنجاح","client_id"=>$client->id]);
     }
 
     /**

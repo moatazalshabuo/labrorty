@@ -37,6 +37,17 @@
                                                     @method('DELETE')
                                                     @csrf
                                                 </form>
+                                            @else
+                                                <a href="{{ route('users.edit', $item->id) }}"
+                                                    class="btn btn-warning text-white">
+                                                    <i class="fa fa-edit"></i></a>
+                                                <button class="btn btn-danger text-white delete"
+                                                    data-id="{{ $item->id }}"><i class="fa fa-trash"></i></button>
+                                                <form action="{{ route('users.destroy', $item->id) }}" method="post"
+                                                    id="delete-user-{{ $item->id }}">
+                                                    @method('DELETE')
+                                                    @csrf
+                                                </form>
                                             @endif
                                         </td>
                                     </tr>
