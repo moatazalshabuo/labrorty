@@ -5,11 +5,11 @@
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-6">
                         <div class="card card-stats p-1 card-round">
                             <div class="card-body ">
                                 <div class="row align-items-center">
-                                    <div class="col-icon">
+                                    <div class="col-icon text-center">
                                         <div class="icon-big text-center icon-secondary bubble-shadow-small">
                                             <i class="fa fa-users"></i>
                                         </div>
@@ -24,11 +24,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-6">
                         <div class="card card-stats card-round p-1">
                             <div class="card-body p-1">
                                 <div class="row align-items-center">
-                                    <div class="col-icon">
+                                    <div class="col-icon text-center">
                                         <div class="icon-big text-center icon-secondary bubble-shadow-small">
                                             <i class="fa fa-users"></i>
                                         </div>
@@ -43,11 +43,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-6">
                         <div class="card card-stats card-round p-1">
                             <div class="card-body p-1">
                                 <div class="row align-items-center">
-                                    <div class="col-icon">
+                                    <div class="col-icon text-center">
                                         <div class="icon-big text-center icon-secondary bubble-shadow-small">
                                             <i class="fa fa-flask"></i>
                                         </div>
@@ -62,11 +62,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-6">
                         <div class="card card-stats card-round p-1">
                             <div class="card-body p-1">
                                 <div class="row align-items-center">
-                                    <div class="col-icon">
+                                    <div class="col-icon text-center">
                                         <div class="icon-big text-center icon-secondary bubble-shadow-small">
                                             <i class="fa fa-flask"></i>
                                         </div>
@@ -81,11 +81,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-6">
                         <div class="card card-stats card-round p-1">
                             <div class="card-body p-1">
                                 <div class="row align-items-center">
-                                    <div class="col-icon">
+                                    <div class="col-icon text-center">
                                         <div class="icon-big text-center icon-secondary bubble-shadow-small">
                                             <i class="fa fa-flask"></i>
                                         </div>

@@ -134,7 +134,7 @@
         <!--
    Tip 1: You can change the background color of the main header using: data-background-color="blue | purple | light-blue | green | orange | red"
   -->
-        <div class="main-header" data-background-color="purple">
+        <div class="main-header" style="height: 70px" data-background-color="purple">
             <!-- Logo Header -->
             <div class="logo-header">
 
@@ -326,6 +326,13 @@
                                         </li>
                                     </ul>
                                 </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/home">
+                                   
+                                    <p> صفحة الدخول</p>
+                                
+                                </a>
                             </li>
                         @endif
                     </ul>

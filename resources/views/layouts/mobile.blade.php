@@ -201,6 +201,13 @@
                                         class="badge badge-count">{{ Helepers::countMassageClient(session()->get('client')->id) }}</span>
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a href="/home">
+                                   
+                                    <p> صفحة الدخول</p>
+                                   
+                                </a>
+                            </li>
                             {{-- <li class="nav-item ">
                                 <a href="{{ route('home') }}">
                                     <i class="fas fa-home"></i>

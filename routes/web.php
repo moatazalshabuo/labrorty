@@ -32,8 +32,11 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+Route::get('/home',function(){
+    return view('f');
+});
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::resource('users', UserController::class)->middleware('auth');
 
