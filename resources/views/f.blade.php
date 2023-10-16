@@ -100,7 +100,8 @@
     </style>
 </head>
 
-<body style="background-image: url({{ asset('assets/img/10.jpg') }});">
+<body
+    style="background-image: url({{ asset('assets/img/55.jpeg') }});background-size: cover;background-repeat: no-repeat;">
     <div id="preloader">
         <div id="loader"></div>
     </div>
@@ -109,18 +110,22 @@
         <div class="row">
             <div class="col-6">
                 <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="{{ asset('assets/img/44.png') }}" alt="Card image cap">
-                    <div class="card-body text-center">
-                        <a href="{{ route('mobile') }}" class="card-text text-dark">عرض نتيجة </a>
-                    </div>
+                    <a href="{{ route('mobile') }}" class="card-text text-dark">
+                        <img class="card-img-top" src="{{ asset('assets/img/44.png') }}" alt="Card image cap">
+                        <div class="card-body text-center">
+                            عرض نتيجة
+                        </div>
+                    </a>
                 </div>
             </div>
             <div class="col-6">
                 <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="{{ asset('assets/img/55.png') }}" alt="Card image cap">
-                    <div class="card-body text-center">
-                        <a href="{{ route('home') }}" class="card-text text-dark">الدخول للنظام</a>
-                    </div>
+                    <a href="{{ route('home') }}" class="card-text text-dark">
+                        <img class="card-img-top" src="{{ asset('assets/img/55.png') }}" alt="Card image cap">
+                        <div class="card-body text-center">
+                            الدخول للنظام
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>

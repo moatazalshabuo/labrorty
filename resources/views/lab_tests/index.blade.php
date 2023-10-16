@@ -2,39 +2,12 @@
 
 @section('content')
     <div class="row text-right" dir="rtl" >
-        <div class="col-md-12">
-            <div class="card" >
-                <div class="card-header">
-                    <h4 class="card-title">جدول اصناف التحاليل</h4>
-                </div>
-                <div class="card-body">
-                    <form action="{{ route('group-test.store') }}" method="post">
-                        @csrf
-                        <div class="row">
-                            <div class="col-md-3">
-                                <label>اسم المجموعة</label>
-                                <input type="text" name="name" value="{{old('name')}}" required class="form-control">
-                            </div>
-                            @error('name')
-                                <p>{{ $message }}</p>
-                            @enderror
-                            <div class="col-md-3">
-                                <label>السعر</label>
-                                <input type="number" name="price" value="{{old('name')}}" min="1" required class="form-control">
-                            </div>
-                            <div class="col-md-2">
-                                <button class="btn btn-success" type="submit">حفظ</button>
-                            </div>
-                        </div>
-
-                    </form>
-                </div>
-            </div>
-        </div>
+        
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">جدول اصناف التحاليل</h4>
+                    <h4 class="card-title">جدول  التحاليل</h4>
+                    <a href="{{ route('lab_tests.create') }}" class="btn btn-primary">اضافة تحليل</a>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">

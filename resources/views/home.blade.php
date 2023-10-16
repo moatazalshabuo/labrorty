@@ -7,19 +7,34 @@
                 <div class="row">
                     <div class="col-6">
                         <div class="card card-stats p-1 card-round">
-                            <div class="card-body ">
-                                <div class="row align-items-center">
-                                    <div class="col-icon text-center">
+                            <div class="card-body">
+                                <a href="{{ route('cl.index') }}">
+                                    <div class=" text-center">
+                                        <div class="icon-big text-center icon-secondary bubble-shadow-small">
+                                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+
+                                    <p class="card-category text-center">الاستقبال</p>
+                                    {{-- <h4 class="card-title">{{ $cusers }}</h4> --}}
+
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card card-stats card-round p-1">
+                            <div class="card-body p-1">
+                                <div class="" data-toggle="modal" data-target="#employee">
+                                    <div class=" text-center">
                                         <div class="icon-big text-center icon-secondary bubble-shadow-small">
                                             <i class="fa fa-users"></i>
                                         </div>
                                     </div>
-                                    <div class="col col-stats ml-3 ml-sm-0">
-                                        <div class="numbers">
-                                            <p class="card-category">عدد المستخدمين</p>
-                                            <h4 class="card-title">{{ $cusers }}</h4>
-                                        </div>
-                                    </div>
+
+                                    <p class="card-category">الموظفين</p>
+                                    {{-- <h4 class="card-title">{{ $cclient }}</h4> --}}
+
                                 </div>
                             </div>
                         </div>
@@ -27,82 +42,50 @@
                     <div class="col-6">
                         <div class="card card-stats card-round p-1">
                             <div class="card-body p-1">
-                                <div class="row align-items-center">
-                                    <div class="col-icon text-center">
-                                        <div class="icon-big text-center icon-secondary bubble-shadow-small">
-                                            <i class="fa fa-users"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col col-stats ml-3 ml-sm-0">
-                                        <div class="numbers">
-                                            <p class="card-category">عدد الزوار</p>
-                                            <h4 class="card-title">{{ $cclient }}</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="card card-stats card-round p-1">
-                            <div class="card-body p-1">
-                                <div class="row align-items-center">
-                                    <div class="col-icon text-center">
+                                <a href="#" data-toggle="modal" data-target="#analysis">
+                                    <div class="text-center">
                                         <div class="icon-big text-center icon-secondary bubble-shadow-small">
                                             <i class="fa fa-flask"></i>
                                         </div>
                                     </div>
-                                    <div class="col col-stats ml-3 ml-sm-0">
-                                        <div class="numbers">
-                                            <p class="card-category"> عدد التحاليل التي يقدمها المختبر</p>
-                                            <h4 class="card-title">{{ $cgroup }}</h4>
-                                        </div>
-                                    </div>
-                                </div>
+                                    <p class="card-category"> بيانات التحاليل</p>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="card card-stats card-round p-1">
                             <div class="card-body p-1">
-                                <div class="row align-items-center">
-                                    <div class="col-icon text-center">
+                                <a href="{{ route('cl.finish') }}">
+                                    <div class=" text-center">
                                         <div class="icon-big text-center icon-secondary bubble-shadow-small">
-                                            <i class="fa fa-flask"></i>
+                                            <i class="fa fa-check-square-o" aria-hidden="true"></i>
                                         </div>
                                     </div>
-                                    <div class="col col-stats ml-3 ml-sm-0">
-                                        <div class="numbers">
-                                            <p class="card-category">عدد التحاليل مكتملة</p>
-                                            <h4 class="card-title">{{ $cfinish }}</h4>
-                                        </div>
-                                    </div>
-                                </div>
+                                    <p class="card-category"> التحاليل مكتملة</p>
+                                    {{-- <h4 class="card-title">{{ $cfinish }}</h4> --}}
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="card card-stats card-round p-1">
                             <div class="card-body p-1">
-                                <div class="row align-items-center">
-                                    <div class="col-icon text-center">
+                                <a href="{{ route('cl.notfinish') }}">
+                                    <div class=" text-center">
                                         <div class="icon-big text-center icon-secondary bubble-shadow-small">
-                                            <i class="fa fa-flask"></i>
+                                            <i class="fa fa-retweet" aria-hidden="true"></i>
                                         </div>
                                     </div>
-                                    <div class="col col-stats ml-3 ml-sm-0">
-                                        <div class="numbers">
-                                            <p class="card-category">عدد التحاليل الغير مكتملة</p>
-                                            <h4 class="card-title">{{ $cnotfinish }}</h4>
-                                        </div>
-                                    </div>
-                                </div>
+                                    <p class="card-category"> التحاليل غير مكتملة</p>
+                                    {{-- <h4 class="card-title">{{ $cfinish }}</h4> --}}
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            {{-- <div class="col-md-6">
                 <div class="card">
                     <div class="card-header">
                         <div class="card-head-row">
@@ -118,7 +101,8 @@
                                             class="fa fa-user"></i></span>
                                 </div>
                                 <div class="flex-1 ml-3 pt-1">
-                                    <h5 class="text-uppercase fw-bold mb-1">{{ $item->client->name }}<span class="text-warning pl-3">
+                                    <h5 class="text-uppercase fw-bold mb-1">{{ $item->client->name }}<span
+                                            class="text-warning pl-3">
                                             @if ($item->status == 1)
                                                 مكتملة
                                             @else
@@ -135,6 +119,126 @@
                             <div class="separator-dashed"></div>
                         @endforeach
                     </div>
+                </div>
+            </div> --}}
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="employee" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">الموظفين</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    
+                    @if(Auth::user()->hasRole('المسؤول'))
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="card card-stats card-round p-1">
+                                    <div class="card-body p-1">
+                                        <a href="{{ route('users.create') }}">
+                                            <div class=" text-center">
+                                                <div class="icon-big text-center icon-secondary bubble-shadow-small">
+                                                    <i class="fa fa-user-plus"></i>
+                                                </div>
+                                            </div>
+
+                                            <p class="card-category text-center">اضافة</p>
+                                            {{-- <h4 class="card-title">{{ $cclient }}</h4> --}}
+
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card card-stats card-round p-1">
+                                    <div class="card-body p-1">
+                                        <a href="{{ route('users.index') }}">
+                                            <div class=" text-center">
+                                                <div class="icon-big text-center icon-secondary bubble-shadow-small">
+                                                    <i class="fa fa-users"></i>
+                                                </div>
+                                            </div>
+                                            <p class="card-category text-center">ادارة</p>
+                                            {{-- <h4 class="card-title">{{ $cclient }}</h4> --}}
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @else
+                        <p>لاتملك الصلاحيات</p>
+                    @endif
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">العودة</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="analysis" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">التحاليل</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    @if(Auth::user()->hasRole('المسؤول'))
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="card card-stats card-round p-1">
+                                    <div class="card-body p-1">
+                                        <a href="{{ route('group-test.index') }}">
+                                            <div class=" text-center">
+                                                <div class="icon-big text-center icon-secondary bubble-shadow-small">
+                                                    <i class="fa fa-flask" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+
+                                            <p class="card-category text-center">مجموعات التحاليل</p>
+                                            {{-- <h4 class="card-title">{{ $cclient }}</h4> --}}
+
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card card-stats card-round p-1">
+                                    <div class="card-body p-1">
+                                        <a href="{{ route('lab_tests.index') }}">
+                                            <div class=" text-center">
+                                                <div class="icon-big text-center icon-secondary bubble-shadow-small">
+                                                    <i class="fa fa-flask" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <p class="card-category text-center">بيانات التحاليل</p>
+                                            {{-- <h4 class="card-title">{{ $cclient }}</h4> --}}
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @else
+                        <p>لا تملك الصلاحيات</p>
+                    @endif
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">العودة</button>
+
                 </div>
             </div>
         </div>

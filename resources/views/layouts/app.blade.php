@@ -138,7 +138,7 @@
             <!-- Logo Header -->
             <div class="logo-header">
 
-                <a href="index.html" class="logo text-white">
+                <a href="{{ route('home') }}" class="logo text-white">
                     <b>مختبر البشرى</b>
                 </a>
                 <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse"
