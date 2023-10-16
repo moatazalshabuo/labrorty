@@ -49,21 +49,30 @@ class ClientGroupTestController extends Controller
 
         foreach ($request->input('group_id') as $val) {
             $tests = LabTest::where('group_id', $val)->get();
-            if(isset($tests[0])){
-            $cgt = ClientGroupTest::create([
-                'client_id' => $request->input('client_id'),
-                "group_id" => $val
-            ]);
-
-            foreach ($tests as $value) {
-                TestClient::create([
-                    'cgt_id' => $cgt->id,
-                    "test_id" => $value->id
+            if (count($tests)) {
+                $cgt = ClientGroupTest::create([
+                    'client_id' => $request->input('client_id'),
+                    "group_id" => $val
                 ]);
+
+                foreach ($tests as $value) {
+                    TestClient::create([
+                        'cgt_id' => $cgt->id,
+                        "test_id" => $value->id
+                    ]);
+                }
+                $message = [
+                    'success' => "تم الحفظ بنجاح"
+                ];
+            } else {
+                
+                $message = [
+                    'error' => "مجموعة التحاليل التي اخترتها لاتحتوي على تحاليل"
+                ];
+                // return redirect()->back()->with('error',"مجموعة التحاليل التي اخترتها لاتحتوي على تحاليل");
             }
         }
-        }
-        return redirect()->back()->with("success","تم الحفظ بنجاح");
+        return redirect()->back()->with($message);
     }
 
     /**
@@ -108,24 +117,25 @@ class ClientGroupTestController extends Controller
 
         foreach ($test as $val) {
             TestClient::find($val->id)->update([
-                "result"=>$request->input("$val->id"),
+                "result" => $request->input("$val->id"),
             ]);
         }
         ClientGroupTest::find($cgt)->update([
-            'status'=>1
+            'status' => 1
         ]);
         return redirect()->route('cl.finish');
     }
-    public function cancel($cgt){
+    public function cancel($cgt)
+    {
         $test = TestClient::where('cgt_id', $cgt)->get();
 
         foreach ($test as $val) {
             TestClient::find($val->id)->update([
-                "result"=>0,
+                "result" => 0,
             ]);
         }
         ClientGroupTest::find($cgt)->update([
-            'status'=>0
+            'status' => 0
         ]);
         return redirect()->route('cl.notfinish');
     }

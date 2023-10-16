@@ -125,7 +125,7 @@
     @yield('css')
 </head>
 
-<body>
+<body style="background-image: url({{ asset('assets/bg2.JPEG') }});background-size: cover;background-repeat: no-repeat;">
 
     <div class="wrapper">
         <div id="preloader">
@@ -328,7 +328,7 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a href="/home">
+                                <a href="{{ route('ho') }}">
                                    
                                     <p> صفحة الدخول</p>
                                 
