@@ -6,7 +6,7 @@
             <div class="col-md-6">
                 <div class="row">
                     <div class="col-6">
-                        <div class="card card-stats p-1 card-round">
+                        <div class="card card-stats p-1 card-round mx-auto" style="width: 75%;">
                             <div class="card-body">
                                 <a href="{{ route('cl.index') }}">
                                     <div class=" text-center">
@@ -15,7 +15,7 @@
                                         </div>
                                     </div>
 
-                                    <p class="card-category text-center">الاستقبال</p>
+                                    <p class="card-category text-center" style="font-size: 10px">الاستقبال</p>
                                     {{-- <h4 class="card-title">{{ $cusers }}</h4> --}}
 
                                 </a>
@@ -23,7 +23,7 @@
                         </div>
                     </div>
                     <div class="col-6">
-                        <div class="card card-stats card-round p-1">
+                        <div class="card card-stats card-round p-1 mx-auto" style="width: 75%;">
                             <div class="card-body p-1">
                                 <div class="" data-toggle="modal" data-target="#employee">
                                     <div class=" text-center">
@@ -32,7 +32,7 @@
                                         </div>
                                     </div>
 
-                                    <p class="card-category">الموظفين</p>
+                                    <p class="card-category text-center" style="font-size: 10px">الموظفين</p>
                                     {{-- <h4 class="card-title">{{ $cclient }}</h4> --}}
 
                                 </div>
@@ -40,7 +40,7 @@
                         </div>
                     </div>
                     <div class="col-6">
-                        <div class="card card-stats card-round p-1">
+                        <div class="card card-stats card-round p-1 mx-auto" style="width: 75%;">
                             <div class="card-body p-1">
                                 <a href="#" data-toggle="modal" data-target="#analysis">
                                     <div class="text-center">
@@ -48,13 +48,13 @@
                                             <i class="fa fa-flask"></i>
                                         </div>
                                     </div>
-                                    <p class="card-category"> بيانات التحاليل</p>
+                                    <p class="card-category text-center" style="font-size: 10px"> بيانات التحاليل</p>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-6">
-                        <div class="card card-stats card-round p-1">
+                        <div class="card card-stats card-round p-1 mx-auto" style="width: 75%;">
                             <div class="card-body p-1">
                                 <a href="{{ route('cl.finish') }}">
                                     <div class=" text-center">
@@ -62,14 +62,14 @@
                                             <i class="fa fa-check-square-o" aria-hidden="true"></i>
                                         </div>
                                     </div>
-                                    <p class="card-category"> التحاليل مكتملة</p>
+                                    <p class="card-category text-center" style="font-size: 10px"> التحاليل مكتملة</p>
                                     {{-- <h4 class="card-title">{{ $cfinish }}</h4> --}}
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-6">
-                        <div class="card card-stats card-round p-1">
+                        <div class="card card-stats card-round p-1 mx-auto" style="width: 75%;">
                             <div class="card-body p-1">
                                 <a href="{{ route('cl.notfinish') }}">
                                     <div class=" text-center">
@@ -77,7 +77,7 @@
                                             <i class="fa fa-retweet" aria-hidden="true"></i>
                                         </div>
                                     </div>
-                                    <p class="card-category"> التحاليل غير مكتملة</p>
+                                    <p class="card-category text-center" style="font-size: 10px"> التحاليل غير مكتملة</p>
                                     {{-- <h4 class="card-title">{{ $cfinish }}</h4> --}}
                                 </a>
                             </div>
@@ -149,7 +149,7 @@
                                                 </div>
                                             </div>
 
-                                            <p class="card-category text-center">اضافة</p>
+                                            <p class="card-category text-center" style="font-size: 10px">اضافة</p>
                                             {{-- <h4 class="card-title">{{ $cclient }}</h4> --}}
 
                                         </a>
@@ -165,7 +165,7 @@
                                                     <i class="fa fa-users"></i>
                                                 </div>
                                             </div>
-                                            <p class="card-category text-center">ادارة</p>
+                                            <p class="card-category text-center" style="font-size: 10px">ادارة</p>
                                             {{-- <h4 class="card-title">{{ $cclient }}</h4> --}}
                                         </a>
                                     </div>
@@ -209,7 +209,7 @@
                                                 </div>
                                             </div>
 
-                                            <p class="card-category text-center">مجموعات التحاليل</p>
+                                            <p class="card-category text-center" style="font-size: 10px">مجموعات التحاليل</p>
                                             {{-- <h4 class="card-title">{{ $cclient }}</h4> --}}
 
                                         </a>
@@ -225,7 +225,7 @@
                                                     <i class="fa fa-flask" aria-hidden="true"></i>
                                                 </div>
                                             </div>
-                                            <p class="card-category text-center">بيانات التحاليل</p>
+                                            <p class="card-category text-center" style="font-size: 10px">بيانات التحاليل</p>
                                             {{-- <h4 class="card-title">{{ $cclient }}</h4> --}}
                                         </a>
                                     </div>
