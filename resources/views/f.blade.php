@@ -101,7 +101,7 @@
 </head>
 
 <body
-    style="background-image: url({{ asset('assets/bg1.JPEG') }});background-size: cover;background-repeat: no-repeat;">
+    style="background-image: url({{ asset('assets/img/fff.JPEG') }});background-size: cover;background-repeat: no-repeat;">
     <div id="preloader">
         <div id="loader"></div>
     </div>
@@ -109,10 +109,10 @@
     <div class="container">
         <div class="row">
             <div class="col-6">
-                <div class="card shadow-lg p-0" style="width: 100%;">
+                <div class="card shadow-lg p-0 m-auto" style="width: 75%;">
                     <a href="{{ route('mobile') }}" class="card-text text-dark">
                         <img class="card-img-top" src="{{ asset('assets/img/44.png') }}" alt="Card image cap">
-                        <div class="card-body text-center">
+                        <div class="card-body text-center p-1">
                             <small>عرض نتيجة
                             </small>
                         </div>
@@ -120,10 +120,10 @@
                 </div>
             </div>
             <div class="col-6">
-                <div class="card shadow-lg p-0" style="width: 100%;">
+                <div class="card shadow-lg p-0 m-auto" style="width: 75%;">
                     <a href="{{ route('home') }}" class="card-text text-dark">
                         <img class="card-img-top" src="{{ asset('assets/img/55.png') }}" alt="Card image cap">
-                        <div class="card-body text-center">
+                        <div class="card-body text-center p-1">
                             <small>الدخول للنظام
                             </small>
                         </div>
@@ -132,6 +132,11 @@
             </div>
         </div>
     </div>
+    <marquee class="bg-white p-3 position-absolute" style="bottom: 0px">
+        @foreach ($test as $item)
+            <span class="m-3">{{$item->name}} <span class="badge badge-success">{{$item->price}}</span>: سعر - </span>
+        @endforeach      
+    </marquee>
     <script src="{{ URL::asset('assets/js/core/jquery.3.2.1.min.js') }}"></script>
     <script>
         $(function() {

@@ -33,12 +33,11 @@
     <style>
         @import url(https://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
 
-        /* font-family: 'Lateef', serif; */
-        body * {
-            font-family: font-family: 'Droid Arabic Kufi', serif;
-            ;
-        }
+/* font-family: 'Lateef', serif; */
+body * {
+font-family: 'Droid Arabic Kufi', serif;
 
+}
         #preloader {
             position: fixed;
             top: 0;
@@ -123,7 +122,7 @@
     @yield('css')
 </head>
 
-<body>
+<body style="background-image: url({{ asset('assets/bg2.JPEG') }});background-size: cover;background-repeat: no-repeat;">
     <div class="wrapper">
         <div id="preloader">
             <div id="loader"></div>
@@ -206,6 +205,13 @@
                                    
                                     <p> صفحة الدخول</p>
                                    
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('about1') }}">
+                                   
+                                    <p> حول النظام</p>
+                                
                                 </a>
                             </li>
                             {{-- <li class="nav-item ">

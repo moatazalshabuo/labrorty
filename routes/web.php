@@ -9,6 +9,7 @@ use App\Http\Controllers\TestController;
 use App\Http\Controllers\UserController;
 use App\Models\Client;
 use App\Models\ClientGroupTest;
+use App\Models\GroupTest;
 use App\Models\SendingMassage;
 use App\Models\Test;
 use Illuminate\Support\Facades\Auth;
@@ -33,7 +34,8 @@ Route::get('/', function () {
 
 Auth::routes();
 Route::get('/home',function(){
-    return view('f');
+    $test = GroupTest::all();
+    return view('f',compact('test'));
 })->name("ho");
 
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -48,6 +50,12 @@ Route::resource('lab_tests', TestController::class)->middleware('auth');
 
 Route::resource("cl", ClientGroupTestController::class)->middleware('auth');
 
+Route::get('about',function(){
+    return view('about');
+})->name('about');
+Route::get('about-mobile',function(){
+    return view('about2');
+})->name('about1');
 Route::controller(ClientGroupTestController::class)->group(function () {
     Route::prefix('cll')->group(function () {
         Route::get('/finish', 'finish')->name('cl.finish');

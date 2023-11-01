@@ -39,6 +39,7 @@
                         <button type="submit" class="btn btn-primary btn-lg btn-block">الدخول</button>
                     </form>
                 </div>
+                <a href="{{ route('ho') }}">العودة لصفحة الدخول</a>
             </div>
         </div>
     </section>

@@ -334,6 +334,13 @@
                                 
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a href="{{ route('about') }}">
+                                   
+                                    <p> حول النظام</p>
+                                
+                                </a>
+                            </li>
                         @endif
                     </ul>
                 </div>
