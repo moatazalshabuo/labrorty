@@ -90,18 +90,21 @@ Route::get('Charts/data', [HomeController::class, 'get_charts'])->name('data_cha
 Route::get('Charts/data/2', [HomeController::class, 'get_g_charts'])->name('data_chart');
 Route::get('Charts', [HomeController::class, 'charts'])->name('charts');
 
-Route::get('message', function () {
-    $basic  = new \Vonage\Client\Credentials\Basic('666b321f', 'izJW5PMsjwqA6Eck');
-    $client = new \Vonage\Client($basic);
-    $response = $client->sms()->send(
-        new \Vonage\SMS\Message\SMS("+218926772981", "BRAND_NAME", 'A text message sent using the Nexmo SMS API')
-    );
+// Route::get('message', function () {
     
-    $message = $response->current();
+
+//     $basic  = new \Vonage\Client\Credentials\Basic('666b321f', 'izJW5PMsjwqA6Eck');
+//     $client = new \Vonage\Client($basic);
     
-    if ($message->getStatus() == 0) {
-        echo "The message was sent successfully\n";
-    } else {
-        echo "The message failed with status: " . $message->getStatus() . "\n";
-    }
-});
+//     $response = $client->sms()->send(
+//         new \Vonage\SMS\Message\SMS("+218926772981", "BRAND_NAME", 'A text message sent using the Nexmo SMS API')
+//     );
+    
+//     $message = $response->current();
+    
+//     if ($message->getStatus() == 0) {
+//         echo "The message was sent successfully\n";
+//     } else {
+//         echo "The message failed with status: " . $message->getStatus() . "\n";
+//     }
+// });
