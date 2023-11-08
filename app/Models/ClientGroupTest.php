@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class ClientGroupTest extends Model
 {
     use HasFactory;
-    protected $fillable = ['client_id', "group_id", 'status'];
+    protected $fillable = ['client_id', "group_id", 'status','day'];
 
     public function client()
     {

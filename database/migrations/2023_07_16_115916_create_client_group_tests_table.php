@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('client_group_tests', function (Blueprint $table) {
             $table->id();
-            $table->foreignId("client_id")->constrained("clients");
-            $table->foreignId("group_id")->constrained("group_tests");
+            $table->foreignId("client_id")->constrained("clients")->cascadeOnDelete();
+            $table->foreignId("group_id")->constrained("group_tests")->cascadeOnDelete();
             $table->boolean("status")->default(0);
             $table->timestamps();
         });

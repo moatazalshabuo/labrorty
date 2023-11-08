@@ -26,7 +26,7 @@ class MobileController extends Controller
     public function login(Request $request)
     {
 
-        $client = Client::where('phone', $request->input('phone'))->get();
+        $client = Client::where(['phone'=>$request->input('phone'),'password'=>$request->input('password')])->get();
 
         if (count($client) > 0) {
             session()->put("client", $client[0]);

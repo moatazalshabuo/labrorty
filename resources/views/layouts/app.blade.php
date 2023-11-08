@@ -265,19 +265,24 @@
 
                         </li>
                         <li class="nav-item">
+                            <a href="{{ route('cl.index') }}">
+                                <p>تخصيص تحليل لعميل</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a data-toggle="collapse" href="#base3">
                                 <i class="fas fa-layer-group"></i>
-                                <p> تحليل لعميل</p>
+                                <p>ادارة نتائج التحاليل</p>
                                 <span class="caret"></span>
                             </a>
                             <div class="collapse" id="base3">
                                 <ul class="nav nav-collapse">
 
-                                    <li>
+                                    {{-- <li>
                                         <a href="{{ route('cl.index') }}">
-                                            <span class="sub-item">اضافة تحليل</span>
+                                            <span class="sub-item">تخصيص تحليل لعميل</span>
                                         </a>
-                                    </li>
+                                    </li> --}}
                                     <li>
                                         <a href="{{ route('cl.finish') }}">
                                             <span class="sub-item"> التحاليل المكتملة</span>
@@ -328,6 +333,13 @@
                                 </div>
                             </li>
                             <li class="nav-item">
+                                <a href="{{ route('charts') }}">
+                                   
+                                    <p> تقارير</p>
+                                
+                                </a>
+                            </li>
+                            <li class="nav-item">
                                 <a href="{{ route('ho') }}">
                                    
                                     <p> صفحة الدخول</p>
@@ -376,7 +388,7 @@
     <script src="{{ URL::asset('assets/js/plugin/moment/moment.min.js') }}"></script>
 
     <!-- Chart JS -->
-    <script src="{{ URL::asset('assets/js/plugin/chart.js') }}/chart.min.js')}}"></script>
+    <script src="{{ URL::asset('assets/js/plugin/chart.js/chart.min.js') }}"></script>
 
     <!-- jQuery Sparkline -->
     <script src="{{ URL::asset('assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js') }}"></script>

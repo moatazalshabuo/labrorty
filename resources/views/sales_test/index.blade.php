@@ -39,7 +39,7 @@
                                     <label for="group_id" class="col-form-label text-md-end">اختر التحاليل </label>
 
                                     <div class="">
-                                        <select class="form-control" id="group_id" required name="group_id[]">
+                                        <select class="form-control select2" id="group_id" multiple required name="group_id[]">
                                             @foreach ($group as $item)
                                                 <option @selected($item->id == old('group_id')) value="{{ $item->id }}">
                                                     {{ $item->name }}</option>

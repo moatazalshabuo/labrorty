@@ -1,12 +1,19 @@
 @extends('layouts.app')
 
+@section('css')
+    <style>
+        .col-4{
+            padding: 10px !important;
+        }
+    </style>
+@endsection
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="row">
-                    <div class="col-6">
-                        <div class="card card-stats p-1 card-round mx-auto" style="width: 75%;">
+                    <div class="col-4">
+                        <div class="card card-stats card-round mx-auto" >
                             <div class="card-body">
                                 <a href="{{ route('cl.index') }}">
                                     <div class=" text-center">
@@ -22,8 +29,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6">
-                        <div class="card card-stats card-round p-1 mx-auto" style="width: 75%;">
+                    <div class="col-4">
+                        <div class="card card-stats card-round mx-auto" >
                             <div class="card-body p-1">
                                 <div class="" data-toggle="modal" data-target="#employee">
                                     <div class=" text-center">
@@ -39,8 +46,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6">
-                        <div class="card card-stats card-round p-1 mx-auto" style="width: 75%;">
+                    <div class="col-4">
+                        <div class="card card-stats card-round mx-auto" >
                             <div class="card-body p-1">
                                 <a href="#" data-toggle="modal" data-target="#analysis">
                                     <div class="text-center">
@@ -53,8 +60,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6">
-                        <div class="card card-stats card-round p-1 mx-auto" style="width: 75%;">
+                    <div class="col-4">
+                        <div class="card card-stats card-round mx-auto" >
                             <div class="card-body p-1">
                                 <a href="{{ route('cl.finish') }}">
                                     <div class=" text-center">
@@ -68,8 +75,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6">
-                        <div class="card card-stats card-round p-1 mx-auto" style="width: 75%;">
+                    <div class="col-4">
+                        <div class="card card-stats card-round mx-auto" >
                             <div class="card-body p-1">
                                 <a href="{{ route('cl.notfinish') }}">
                                     <div class=" text-center">

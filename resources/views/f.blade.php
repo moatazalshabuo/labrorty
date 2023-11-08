@@ -132,6 +132,7 @@
             </div>
         </div>
     </div>
+    <a href="{{ route('about1') }}" class="badge badge-primary position-absolute" style="bottom: 170px;left:40%">حول النظام</a>
     <marquee class="bg-white p-3 position-absolute" style="bottom: 55px">
         @foreach ($test as $item)
             <span class="m-3">{{$item->name}} <span class="badge badge-success">{{$item->price}}</span>: سعر - </span>

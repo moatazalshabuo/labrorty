@@ -5,7 +5,7 @@
         <div class="col-md-12">
             <div class="card" >
                 <div class="card-header">
-                    <h4 class="card-title">جدول اصناف التحاليل</h4>
+                    <h4 class="card-title">اضافة مجموعة تحاليل</h4>
                 </div>
                 <div class="card-body">
                     <form action="{{ route('group-test.store') }}" method="post">

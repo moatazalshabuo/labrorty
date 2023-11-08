@@ -118,6 +118,7 @@ font-family: 'Droid Arabic Kufi', serif;
                 transform: rotate(360deg);
             }
         }
+        
     </style>
     @yield('css')
 </head>
@@ -130,30 +131,31 @@ font-family: 'Droid Arabic Kufi', serif;
         <!--
    Tip 1: You can change the background color of the main header using: data-background-color="blue | purple | light-blue | green | orange | red"
   -->
+  @yield('header')
+ 
         @isset(session()->get('client')->name)
-            <div class="main-header" data-background-color="purple">
-                <!-- Logo Header -->
-                <div class="logo-header">
-
-                    <a href="index.html" class="logo">
-                        <b>مختبر البشرى</b>
-                                        </a>
-                    <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse"
-                        data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon">
-                            <i class="fa fa-bars"></i>
-                        </span>
+        <div class="main-header" data-background-color="purple">
+            <!-- Logo Header -->
+            <div class="logo-header">
+        
+                <a href="index.html" class="logo text-white">
+                    <b>مختبر البشرى</b>
+                                    </a>
+                <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse"
+                    data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                        <i class="fa fa-bars"></i>
+                    </span>
+                </button>
+                <a href="{{ url()->previous() }}" class=" more"><i class="fa fa-arrow-right"></i></a>
+                <div class="navbar-minimize">
+                    <button class="btn btn-minimize btn-rounded">
+                        <i class="fa fa-bars"></i>
                     </button>
-                    <a href="{{ url()->previous() }}" class=" more"><i class="fa fa-arrow-right"></i></a>
-                    <div class="navbar-minimize">
-                        <button class="btn btn-minimize btn-rounded">
-                            <i class="fa fa-bars"></i>
-                        </button>
-                    </div>
                 </div>
-                <!-- End Logo Header -->
             </div>
-
+            <!-- End Logo Header -->
+        </div>
             <!-- Sidebar -->
             <div class="sidebar">
 

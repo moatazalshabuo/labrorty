@@ -1,6 +1,20 @@
 @extends('layouts.mobile')
 
+@section('header')
+<div class="main-header" data-background-color="purple">
+  <!-- Logo Header -->
+  <div class="logo-header">
 
+      <a href="index.html" class="logo text-white">
+          <b>مختبر البشرى</b>
+                          </a>
+      
+      <a href="{{ url()->previous() }}" class=" more"><i class="fa fa-arrow-right"></i></a>
+      
+  </div>
+  <!-- End Logo Header -->
+</div>
+@endsection
 @section('content')
 
 <section id="about" class="about"> 
