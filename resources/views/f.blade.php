@@ -109,9 +109,9 @@
     <div class="container">
         <div class="row">
             <div class="col-6">
-                <div class="card shadow-lg p-0 m-auto" style="width: 75%;">
+                <div class="card  p-0 m-auto" style="width: 75%;background-color: #fff0;box-shadow:none;border: 0;">
                     <a href="{{ route('mobile') }}" class="card-text text-dark">
-                        <img class="card-img-top" src="{{ asset('assets/img/44.png') }}" alt="Card image cap">
+                        <img class="card-img-top" src="{{ asset('assets/img/44-removebg-preview.png') }}" alt="Card image cap">
                         <div class="card-body text-center p-1">
                             <small>عرض نتيجة
                             </small>
@@ -120,9 +120,9 @@
                 </div>
             </div>
             <div class="col-6">
-                <div class="card shadow-lg p-0 m-auto" style="width: 75%;">
+                <div class="card  p-0 m-auto" style="width: 75%;background-color: #fff0;box-shadow:none;border: 0;">
                     <a href="{{ route('home') }}" class="card-text text-dark">
-                        <img class="card-img-top" src="{{ asset('assets/img/55.png') }}" alt="Card image cap">
+                        <img class="card-img-top" src="{{ asset('assets/img/55-removebg-preview.png') }}" alt="Card image cap">
                         <div class="card-body text-center p-1">
                             <small>الدخول للنظام
                             </small>

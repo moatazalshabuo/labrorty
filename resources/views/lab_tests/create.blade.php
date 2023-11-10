@@ -81,9 +81,12 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-12">
+                            <label>المعدل الطبيعي  </label>
+                        </div>
+                        <div class="col-6">
                             <div class="form-group">
-                                <label for="normal_form" class="col-form-label text-md-end">المعدل الطبيعي من  </label>
+                                <label for="normal_form" class="col-form-label text-md-end">من </label>
 
                                 <div class="">
                                     <input id="normal_form" type="text"
@@ -99,9 +102,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-6">
                             <div class="form-group">
-                                <label for="normal_to" class="col-form-label text-md-end">المعدل الطبيعي الى  </label>
+                                <label for="normal_to" class="col-form-label text-md-end">  الى  </label>
 
                                 <div class="">
                                     <input id="normal_to" type="text"

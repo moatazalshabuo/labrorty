@@ -26,11 +26,14 @@
 
             <div class="row d-flex justify-content-center">
                 <div class="col-md-10">
-
-                    <div class="card" id="chat2">
-                        <div class="card-header d-flex justify-content-between align-items-center p-3">
-                            <h5 class="mb-0">{{$message[0]->client->name}}</h5>
-                        </div>
+                    
+                        
+                    <div class="card" id="chat2" style="height: 530px;">
+                        @isset($$message[0])
+                            <div class="card-header d-flex justify-content-between align-items-center p-3">
+                                <h5 class="mb-0">{{$message[0]->client->name}}</h5>
+                            </div>
+                        @endisset
                         <div class="card-body" data-mdb-perfect-scrollbar="true" style="position: relative; height: 350px;overflow-y:scroll">
                             @foreach ($message as $item)
                                 @if($item->receiver_id)

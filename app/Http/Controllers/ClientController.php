@@ -38,7 +38,8 @@ class ClientController extends Controller
         $client =  Client::create([
             'name'=>$request->name,
             "phone"=>$request->phone,
-            "address"=>$request->address
+            "address"=>$request->address,
+            'password'=>$request->password
         ]);
         return redirect()->back()->with(["success"=>"تم الحفظ بنجاح","client_id"=>$client->id]);
     }
@@ -72,7 +73,8 @@ class ClientController extends Controller
         $client->update([
             'name'=>$request->name,
             "phone"=>$request->phone,
-            "address"=>$request->address
+            "address"=>$request->address,
+            'password'=>$request->password
         ]);
         return redirect()->route('client.index')->with("success","تم الحفظ بنجاح");
     }

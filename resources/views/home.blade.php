@@ -13,24 +13,24 @@
             <div class="col-md-6">
                 <div class="row">
                     <div class="col-4">
-                        <div class="card card-stats card-round mx-auto" >
+                        <div class="card card-stats card-round mx-auto" style="background-color: #fff0;box-shadow:none" >
                             <div class="card-body">
-                                <a href="{{ route('cl.index') }}">
+                                <div data-toggle="modal" data-target="#client">
                                     <div class=" text-center">
                                         <div class="icon-big text-center icon-secondary bubble-shadow-small">
                                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                         </div>
                                     </div>
 
-                                    <p class="card-category text-center" style="font-size: 10px">الاستقبال</p>
+                                    <p class="card-category text-center" style="font-size: 10px">العملاء</p>
                                     {{-- <h4 class="card-title">{{ $cusers }}</h4> --}}
 
-                                </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-4">
-                        <div class="card card-stats card-round mx-auto" >
+                        <div class="card card-stats card-round mx-auto" style="background-color: #fff0;box-shadow:none">
                             <div class="card-body p-1">
                                 <div class="" data-toggle="modal" data-target="#employee">
                                     <div class=" text-center">
@@ -47,7 +47,7 @@
                         </div>
                     </div>
                     <div class="col-4">
-                        <div class="card card-stats card-round mx-auto" >
+                        <div class="card card-stats card-round mx-auto" style="background-color: #fff0;box-shadow:none">
                             <div class="card-body p-1">
                                 <a href="#" data-toggle="modal" data-target="#analysis">
                                     <div class="text-center">
@@ -60,36 +60,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-4">
-                        <div class="card card-stats card-round mx-auto" >
-                            <div class="card-body p-1">
-                                <a href="{{ route('cl.finish') }}">
-                                    <div class=" text-center">
-                                        <div class="icon-big text-center icon-secondary bubble-shadow-small">
-                                            <i class="fa fa-check-square-o" aria-hidden="true"></i>
-                                        </div>
-                                    </div>
-                                    <p class="card-category text-center" style="font-size: 10px"> التحاليل مكتملة</p>
-                                    {{-- <h4 class="card-title">{{ $cfinish }}</h4> --}}
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="card card-stats card-round mx-auto" >
-                            <div class="card-body p-1">
-                                <a href="{{ route('cl.notfinish') }}">
-                                    <div class=" text-center">
-                                        <div class="icon-big text-center icon-secondary bubble-shadow-small">
-                                            <i class="fa fa-retweet" aria-hidden="true"></i>
-                                        </div>
-                                    </div>
-                                    <p class="card-category text-center" style="font-size: 10px"> التحاليل غير مكتملة</p>
-                                    {{-- <h4 class="card-title">{{ $cfinish }}</h4> --}}
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
             {{-- <div class="col-md-6">
@@ -131,6 +102,61 @@
         </div>
     </div>
 
+
+    <div class="modal fade" id="client" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">العملاء</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="card text-center card-stats card-round p-1">
+                                <div class="card-body p-1 w-75 m-auto">
+                                    <a href="{{ route('cl.notfinish') }}">
+                                        <div class=" text-center">
+                                            <div class="icon-big text-center icon-secondary bubble-shadow-small">
+                                                <i class="fa fa-user-plus"></i>
+                                            </div>
+                                        </div>
+
+                                        <p class="card-category text-center" style="font-size: 10px">ادارة نتائج التحاليل</p>
+                                        {{-- <h4 class="card-title">{{ $cclient }}</h4> --}}
+
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card text-center card-stats card-round p-1">
+                                <div class="card-body p-1 w-75 m-auto">
+                                    <div data-toggle="modal" data-target="#anal">
+                                        <div class=" text-center">
+                                            <div class="icon-big text-center icon-secondary bubble-shadow-small">
+                                                <i class="fa fa-users"></i>
+                                            </div>
+                                        </div>
+                                        <p class="card-category text-center" style="font-size: 10px">ادارة العملاء</p>
+                                        {{-- <h4 class="card-title">{{ $cclient }}</h4> --}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">العودة</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Modal -->
     <div class="modal fade" id="employee" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
         aria-hidden="true">
@@ -147,8 +173,8 @@
                     @if(Auth::user()->hasRole('المسؤول'))
                         <div class="row">
                             <div class="col-6">
-                                <div class="card card-stats card-round p-1">
-                                    <div class="card-body p-1">
+                                <div class="card text-center card-stats card-round p-1">
+                                    <div class="card-body p-1 w-75 m-auto">
                                         <a href="{{ route('users.create') }}">
                                             <div class=" text-center">
                                                 <div class="icon-big text-center icon-secondary bubble-shadow-small">
@@ -164,8 +190,8 @@
                                 </div>
                             </div>
                             <div class="col-6">
-                                <div class="card card-stats card-round p-1">
-                                    <div class="card-body p-1">
+                                <div class="card text-center card-stats card-round p-1">
+                                    <div class="card-body p-1 w-75 m-auto">
                                         <a href="{{ route('users.index') }}">
                                             <div class=" text-center">
                                                 <div class="icon-big text-center icon-secondary bubble-shadow-small">
@@ -207,8 +233,8 @@
                     @if(Auth::user()->hasRole('المسؤول'))
                         <div class="row">
                             <div class="col-6">
-                                <div class="card card-stats card-round p-1">
-                                    <div class="card-body p-1">
+                                <div class="card text-center card-stats card-round p-1">
+                                    <div class="card-body p-1 w-75 m-auto">
                                         <a href="{{ route('group-test.index') }}">
                                             <div class=" text-center">
                                                 <div class="icon-big text-center icon-secondary bubble-shadow-small">
@@ -224,8 +250,8 @@
                                 </div>
                             </div>
                             <div class="col-6">
-                                <div class="card card-stats card-round p-1">
-                                    <div class="card-body p-1">
+                                <div class="card text-center card-stats card-round p-1">
+                                    <div class="card-body p-1 w-75 m-auto">
                                         <a href="{{ route('lab_tests.index') }}">
                                             <div class=" text-center">
                                                 <div class="icon-big text-center icon-secondary bubble-shadow-small">
@@ -242,6 +268,61 @@
                     @else
                         <p>لا تملك الصلاحيات</p>
                     @endif
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">العودة</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="anal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">ادارة العملاء</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="card text-center card-stats card-round p-1">
+                                    <div class="card-body p-1 w-75 m-auto">
+                                        <a href="{{ route('cl.index') }}">
+                                            <div class=" text-center">
+                                                <div class="icon-big text-center icon-secondary bubble-shadow-small">
+                                                    <i class="fa fa-flask" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+
+                                            <p class="card-category text-center" style="font-size: 10px">تخصيص تحليل لعميل</p>
+                                            {{-- <h4 class="card-title">{{ $cclient }}</h4> --}}
+
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card text-center card-stats card-round p-1">
+                                    <div class="card-body p-1 w-75 m-auto">
+                                        <a href="{{ route('client.index') }}">
+                                            <div class=" text-center">
+                                                <div class="icon-big text-center icon-secondary bubble-shadow-small">
+                                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <p class="card-category text-center" style="font-size: 10px">اضافة عميل</p>
+                                            {{-- <h4 class="card-title">{{ $cclient }}</h4> --}}
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">العودة</button>

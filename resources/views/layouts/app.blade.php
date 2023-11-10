@@ -134,7 +134,7 @@
         <!--
    Tip 1: You can change the background color of the main header using: data-background-color="blue | purple | light-blue | green | orange | red"
   -->
-        <div class="main-header" style="height: 70px" data-background-color="purple">
+        <div class="main-header" style="height: 60px" data-background-color="purple">
             <!-- Logo Header -->
             <div class="logo-header">
 
@@ -226,24 +226,24 @@
                                 <span class="sidebar-mini-icon">
                                     {{-- <i class="fa fa-users"></i> --}}
                                 </span>
-                                <h4 class="text-section">المستخدمين</h4>
+                                <h4 class="text-section">الموظفين</h4>
                             </li>
                             <li class="nav-item">
                                 <a data-toggle="collapse" href="#base">
                                     <i class="fa fa-users"></i>
-                                    <p> المستخدمن</p>
+                                    <p> الموظفين</p>
                                     <span class="caret"></span>
                                 </a>
                                 <div class="collapse" id="base">
                                     <ul class="nav nav-collapse">
                                         <li>
                                             <a href="{{ route('users.index') }}">
-                                                <span class="sub-item">ادارة المستخدمن</span>
+                                                <p >ادارة الموظفين</p>
                                             </a>
                                         </li>
                                         <li>
                                             <a href="{{ route('users.create') }}">
-                                                <span class="sub-item">اضافة مستخدم</span>
+                                                <p>اضافة موظف</p>
                                             </a>
                                         </li>
                                     </ul>
@@ -257,19 +257,42 @@
                             <h4 class="text-section">العملاء</h4>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('client.index') }}">
+                            <a data-toggle="collapse" href="#base1">
                                 <i class="fa fa-users"></i>
                                 <p> العملاء</p>
-                                {{-- <span class="caret"></span> --}}
+                                <span class="caret"></span>
                             </a>
-
+                            <div class="collapse" id="base1">
+                                <ul class="nav nav-collapse">
+                                    <li>
+                                        <a href="{{ route('cl.notfinish') }}">
+                                            <p>ادارة نتائج التحاليل</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a data-toggle="collapse" href="#base2">
+                                          
+                                            <p> ادارة العملاء</p>
+                                            <span class="caret"></span>
+                                        </a>
+                                        <div class="collapse" id="base2">
+                                            <ul class="nav nav-collapse">
+                                                <li>
+                                                    <a href="{{ route('cl.index') }}">
+                                                        <p>تخصيص تحليل لعميل</p>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="{{ route('client.index') }}">
+                                                        <p>اضافة عملاء</p>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                </ul>
+                            </div>
                         </li>
-                        <li class="nav-item">
-                            <a href="{{ route('cl.index') }}">
-                                <p>تخصيص تحليل لعميل</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a data-toggle="collapse" href="#base3">
                                 <i class="fas fa-layer-group"></i>
                                 <p>ادارة نتائج التحاليل</p>
@@ -277,12 +300,6 @@
                             </a>
                             <div class="collapse" id="base3">
                                 <ul class="nav nav-collapse">
-
-                                    {{-- <li>
-                                        <a href="{{ route('cl.index') }}">
-                                            <span class="sub-item">تخصيص تحليل لعميل</span>
-                                        </a>
-                                    </li> --}}
                                     <li>
                                         <a href="{{ route('cl.finish') }}">
                                             <span class="sub-item"> التحاليل المكتملة</span>
@@ -295,7 +312,7 @@
                                     </li>
                                 </ul>
                             </div>
-                        </li>
+                        </li> --}}
                         <li class="nav-section">
                             <span class="sidebar-mini-icon">
                                 <i class="fa fa-user"></i>
@@ -303,50 +320,52 @@
                             <h4 class="text-section">التحاليل</h4>
                         </li>
                         @if (Auth::user()->hasRole('المسؤول') || Auth::user()->hasRole('الاداري'))
+                            
                             <li class="nav-item">
-                                <a href="{{ route('group-test.index') }}">
+                                <a data-toggle="collapse" href="#base3">
                                     <i class="fa fa-flask"></i>
-                                    <p> مجموعات التحاليل</p>
-                                    {{-- <span class="caret"></span> --}}
-                                </a>
-
-                            </li>
-                            <li class="nav-item">
-                                <a data-toggle="collapse" href="#base2">
-                                    <i class="fas fa-layer-group"></i>
                                     <p> التحاليل</p>
                                     <span class="caret"></span>
                                 </a>
-                                <div class="collapse" id="base2">
+                                <div class="collapse" id="base3">
                                     <ul class="nav nav-collapse">
-                                        <li>
-                                            <a href="{{ route('lab_tests.index') }}">
-                                                <span class="sub-item">ادارة التحاليل</span>
+                                        <li >
+                                            <a href="{{ route('group-test.index') }}">
+                                                <i class="fa fa-flask"></i>
+                                                <p> مجموعات التحاليل</p>
+                                                {{-- <span class="caret"></span> --}}
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="{{ route('lab_tests.create') }}">
-                                                <span class="sub-item">اضافة تحليل</span>
+                                            <a href="{{ route('lab_tests.index') }}">
+                                                <i class="fa fa-flask"></i>
+                                                <p>بيانات التحاليل</p>
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
                             </li>
+                            <li class="nav-section">
+                                <span class="sidebar-mini-icon">
+                                    <i class="fa fa-user"></i>
+                                </span>
+                                <h4 class="text-section"></h4>
+                            </li>
                             <li class="nav-item">
                                 <a href="{{ route('charts') }}">
-                                   
+                                    <i class="fa fa-bar-chart" aria-hidden="true"></i>
                                     <p> تقارير</p>
                                 
                                 </a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item p-2">
                                 <a href="{{ route('ho') }}">
                                    
                                     <p> صفحة الدخول</p>
                                 
                                 </a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item p-2">
                                 <a href="{{ route('about') }}">
                                    
                                     <p> حول النظام</p>

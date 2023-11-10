@@ -197,23 +197,25 @@
                         <div class="inbox-message" style="max-height: 600px;overflow-y:scroll">
                             <ul>
                                 @foreach ($message as $item)
-                                    <li>
-                                        <a href="{{route('message.client_message',$item->id)}}">
-                                            <div class="message-avatar">
-                                                <i class="fa fa-user" style="font-size:35px"></i>
-                                                <span class="badge badge-success">{{ Helepers::countMassageClient($item->id) }}</span>
+                                @isset ($item->massage[0])
+                                <li>
+                                    <a href="{{route('message.client_message',$item->id)}}">
+                                        <div class="message-avatar">
+                                            <i class="fa fa-user" style="font-size:35px"></i>
+                                            <span class="badge badge-success">{{ Helepers::countMassageClient($item->id) }}</span>
+                                        </div>
+                                        <div class="message-body">
+                                            <div class="message-body-heading">
+                                                <h5>{{ $item->name }}</h5>
+                                                <br>
+                                                <span>{{ $item->massage[0]->created_at }}</span>
+                                                <br>
                                             </div>
-                                            <div class="message-body">
-                                                <div class="message-body-heading">
-                                                    <h5>{{ $item->name }}</h5>
-                                                    <br>
-                                                    <span>{{ $item->massage[0]->created_at }}</span>
-                                                    <br>
-                                                </div>
-                                                <p>{{ $item->massage[0]->message }}</p>
-                                            </div>
-                                        </a>
-                                    </li>
+                                            <p>{{ $item->massage[0]->message }}</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                @endisset
                                 @endforeach
                             </ul>
                         </div>

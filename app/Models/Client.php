@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Client extends Model
 {
     use HasFactory;
-    protected $fillable = ["name","phone","address","created_at","id"];
+    protected $fillable = ["name","phone","address","created_at",'password',"id"];
     protected $table = 'clients';
 
     public function massage(){
