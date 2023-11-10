@@ -17,8 +17,9 @@
                             <div class="card-body">
                                 <div data-toggle="modal" data-target="#client">
                                     <div class=" text-center">
-                                        <div class="icon-big text-center icon-secondary bubble-shadow-small">
-                                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                        <div class="icon-big text-center icon-secondary bubble-shadow-small " style="height: 60px;overflow:hidden">
+                                            {{-- <i class="fa fa-pencil-square-o" aria-hidden="true"></i> --}}
+                                            <img src="{{ asset('assets/client.jpeg') }}" class="w-100 h-100">
                                         </div>
                                     </div>
 
@@ -34,8 +35,9 @@
                             <div class="card-body p-1">
                                 <div class="" data-toggle="modal" data-target="#employee">
                                     <div class=" text-center">
-                                        <div class="icon-big text-center icon-secondary bubble-shadow-small">
-                                            <i class="fa fa-users"></i>
+                                        <div class="icon-big text-center icon-secondary bubble-shadow-small " style="height: 60px;overflow:hidden">
+                                            {{-- <i class="fa fa-pencil-square-o" aria-hidden="true"></i> --}}
+                                            <img src="{{ asset('assets/emmployee.jpeg') }}" class="w-100 h-100">
                                         </div>
                                     </div>
 
@@ -51,8 +53,9 @@
                             <div class="card-body p-1">
                                 <a href="#" data-toggle="modal" data-target="#analysis">
                                     <div class="text-center">
-                                        <div class="icon-big text-center icon-secondary bubble-shadow-small">
-                                            <i class="fa fa-flask"></i>
+                                        <div class="icon-big text-center icon-secondary bubble-shadow-small " style="height: 60px;overflow:hidden">
+                                            {{-- <i class="fa fa-pencil-square-o" aria-hidden="true"></i> --}}
+                                            <img src="{{ asset('assets/analysis.jpeg') }}" class="w-100 h-100">
                                         </div>
                                     </div>
                                     <p class="card-category text-center" style="font-size: 10px"> بيانات التحاليل</p>
@@ -60,7 +63,21 @@
                             </div>
                         </div>
                     </div>
-                    
+                    <div class="col-4">
+                        <div class="card card-stats card-round mx-auto" style="background-color: #fff0;box-shadow:none">
+                            <div class="card-body p-1">
+                                <a href="{{ route('cl.finish') }}">
+                                    <div class="text-center">
+                                        <div class="icon-big text-center icon-secondary bubble-shadow-small " style="height: 60px;overflow:hidden;background-color: #fff0">
+                                            {{-- <i class="fa fa-pencil-square-o" aria-hidden="true"></i> --}}
+                                            <img src="{{ asset('assets/finish.png') }}" class="w-100 h-100">
+                                        </div>
+                                    </div>
+                                    <p class="card-category text-center" style="font-size: 10px">  التحاليل المكتملة</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             {{-- <div class="col-md-6">
