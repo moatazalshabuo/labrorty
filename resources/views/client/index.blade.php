@@ -8,8 +8,13 @@
                     <h4 class="card-title">جدول عملاء المختبر</h4>
                 </div>
                 <div class="card-body">
-                    <button class="btn btn-primary m-3" data-toggle="modal" data-target="#exampleModal">اضافة عميل <i
+                    <div class="row">
+                        <button class="btn btn-primary m-3 col" data-toggle="modal" data-target="#exampleModal">اضافة عميل <i
                             class="fa fa-plus"></i></button>
+                        <a class="btn btn-primary m-3 col" href="{{ route('cl.index') }}">تخصيص تحليل لعميل <i
+                                class="fa fa-plus"></i></a>
+                    </div>
+                    
                     <div class="table-responsive">
                         <table id="user-table" class="display table table-striped table-hover">
                             <thead>
@@ -133,7 +138,7 @@
             @if ($errors->any())
             $('#exampleModal').modal('show')
             @endif
+        
         })
-
     </script>
 @endsection

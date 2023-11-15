@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Client;
 use App\Models\ClientGroupTest;
+use App\Models\GroupTest;
 use App\Models\SendingMassage;
 use App\Models\TestClient;
 use Illuminate\Contracts\Session\Session;
@@ -43,7 +44,8 @@ class MobileController extends Controller
             return view("phone/index");
         }
         $test = TestClient::with("client_tests")->where('cgt_id', $id)->get();
-        return view('phone/test', compact('test'));
+        $group = GroupTest::find($test[0]->client_tests->group_id);
+        return view('phone/test', compact('test','group'));
     }
 
     public function Chating()

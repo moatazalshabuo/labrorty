@@ -2,84 +2,26 @@
 
 @section('css')
     <style>
+        body{
+            background-image: url("{{ asset('assets/img/fff.JPEG') }}") !important;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
         .col-4{
             padding: 10px !important;
+        }
+        .head-title{
+            text-align: center;
+            margin-top: 20px;
+
         }
     </style>
 @endsection
 @section('content')
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="row">
-                    <div class="col-4">
-                        <div class="card card-stats card-round mx-auto" style="background-color: #fff0;box-shadow:none" >
-                            <div class="card-body">
-                                <div data-toggle="modal" data-target="#client">
-                                    <div class=" text-center">
-                                        <div class="icon-big text-center icon-secondary bubble-shadow-small " style="height: 60px;overflow:hidden">
-                                            {{-- <i class="fa fa-pencil-square-o" aria-hidden="true"></i> --}}
-                                            <img src="{{ asset('assets/client.jpeg') }}" class="w-100 h-100">
-                                        </div>
-                                    </div>
-
-                                    <p class="card-category text-center" style="font-size: 10px">العملاء</p>
-                                    {{-- <h4 class="card-title">{{ $cusers }}</h4> --}}
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="card card-stats card-round mx-auto" style="background-color: #fff0;box-shadow:none">
-                            <div class="card-body p-1">
-                                <div class="" data-toggle="modal" data-target="#employee">
-                                    <div class=" text-center">
-                                        <div class="icon-big text-center icon-secondary bubble-shadow-small " style="height: 60px;overflow:hidden">
-                                            {{-- <i class="fa fa-pencil-square-o" aria-hidden="true"></i> --}}
-                                            <img src="{{ asset('assets/emmployee.jpeg') }}" class="w-100 h-100">
-                                        </div>
-                                    </div>
-
-                                    <p class="card-category text-center" style="font-size: 10px">الموظفين</p>
-                                    {{-- <h4 class="card-title">{{ $cclient }}</h4> --}}
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="card card-stats card-round mx-auto" style="background-color: #fff0;box-shadow:none">
-                            <div class="card-body p-1">
-                                <a href="#" data-toggle="modal" data-target="#analysis">
-                                    <div class="text-center">
-                                        <div class="icon-big text-center icon-secondary bubble-shadow-small " style="height: 60px;overflow:hidden">
-                                            {{-- <i class="fa fa-pencil-square-o" aria-hidden="true"></i> --}}
-                                            <img src="{{ asset('assets/analysis.jpeg') }}" class="w-100 h-100">
-                                        </div>
-                                    </div>
-                                    <p class="card-category text-center" style="font-size: 10px"> بيانات التحاليل</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="card card-stats card-round mx-auto" style="background-color: #fff0;box-shadow:none">
-                            <div class="card-body p-1">
-                                <a href="{{ route('cl.finish') }}">
-                                    <div class="text-center">
-                                        <div class="icon-big text-center icon-secondary bubble-shadow-small " style="height: 60px;overflow:hidden;background-color: #fff0">
-                                            {{-- <i class="fa fa-pencil-square-o" aria-hidden="true"></i> --}}
-                                            <img src="{{ asset('assets/finish.png') }}" class="w-100 h-100">
-                                        </div>
-                                    </div>
-                                    <p class="card-category text-center" style="font-size: 10px">  التحاليل المكتملة</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <h3 class="text-center font-weight-bold" style="line-height: 30px">مختبر الطبي التشخيصي للتحاليل الطبية والانسجه</h3>
+        {{-- <div class="row justify-content-center"> --}}
+           
             {{-- <div class="col-md-6">
                 <div class="card">
                     <div class="card-header">
@@ -116,7 +58,7 @@
                     </div>
                 </div>
             </div> --}}
-        </div>
+        {{-- </div> --}}
     </div>
 
 

@@ -10,7 +10,7 @@
                 <div class="card-body">
                     <button class="btn btn-primary m-3" data-toggle="modal" data-target="#exampleModal">اضافة عميل <i
                         class="fa fa-plus"></i></button>
-                    <form action="{{ route('cl.store') }}" method="post">
+                    <form action="{{ route('cl.store') }}" method="post" id='form-save'>
                         @csrf
                         <div class="row">
                             <div class="col-md-12">
@@ -55,7 +55,7 @@
                                 </div>
                             </div>
                             <div class="col-md-2">
-                                <button class="btn btn-success m-5" type="submit">حفظ</button>
+                                <button class="btn btn-success m-5" type="submit" id='save'>حفظ</button>
                             </div>
                         </div>
                     </form>
@@ -130,6 +130,42 @@
             @if ($errors->any())
                 $('#exampleModal').modal('show')
             @endif
+
+            $("#save").click(function(e){
+            e.preventDefault();
+            $.ajax({
+                url: '{{ route("check") }}',
+                type: 'post',
+                data:$('#form-save').serialize(),
+                success:function(res){
+                    element = ''
+                    if(res.status){
+                    //   for (let index = 0; index < res.data.length; index++) {
+                    //      element +=" " + res.data[index]['name'];
+                    //   }
+                      Swal.fire({
+                        title: "",
+                        text: `التحاليل التالية مدخلة مسبقا هذا اليوم لنفس العميل هل تريد تخصيصها مجددا !ّّ ` + res.data,
+                        icon: "warning",
+                        showCancelButton: true,
+                        confirmButtonColor: "#3085d6",
+                        cancelButtonColor: "#d33",
+                        confirmButtonText: "حفظ",
+                        cancelButtonText:'الغاء',
+                        }).then((result) => {
+                        if (result.isConfirmed) {
+                            $('#form-save').submit()    
+                        }
+                        });
+                    }else{
+                        $('#form-save').submit()                        
+                    }
+                },
+                error:function(res){
+                    console.log(res);
+                }
+            })
+        })
         })
     </script>
 @endsection

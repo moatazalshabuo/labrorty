@@ -24,7 +24,7 @@
                     <div class="row mb-0">
                         <div class=" offset-md-4">
                             <button type="submit" class="btn btn-primary">
-                                تعديل
+                               حفظ
                             </button>
                         </div>
                     </div>

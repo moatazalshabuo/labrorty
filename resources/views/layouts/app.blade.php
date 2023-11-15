@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="{{ URL::asset('assets/font-awesome-4.7.0/css/font-awesome.min.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="{{ URL::asset('assets/css/demo.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
         @import url(https://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
 
@@ -139,7 +140,7 @@
             <div class="logo-header">
 
                 <a href="{{ route('home') }}" class="logo text-white">
-                    <b>مختبر البشرى</b>
+                    <b></b>
                 </a>
                 <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse"
                     data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -237,13 +238,13 @@
                                 <div class="collapse" id="base">
                                     <ul class="nav nav-collapse">
                                         <li>
-                                            <a href="{{ route('users.index') }}">
-                                                <p >ادارة الموظفين</p>
+                                            <a href="{{ route('users.create') }}">
+                                                <p>اضافة موظف</p>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="{{ route('users.create') }}">
-                                                <p>اضافة موظف</p>
+                                            <a href="{{ route('users.index') }}">
+                                                <p >ادارة الموظفين</p>
                                             </a>
                                         </li>
                                     </ul>
@@ -269,6 +270,7 @@
                                             <p>ادارة نتائج التحاليل</p>
                                         </a>
                                     </li>
+                                   
                                     <li class="nav-item">
                                         <a data-toggle="collapse" href="#base2">
                                           
@@ -278,13 +280,13 @@
                                         <div class="collapse" id="base2">
                                             <ul class="nav nav-collapse">
                                                 <li>
-                                                    <a href="{{ route('cl.index') }}">
-                                                        <p>تخصيص تحليل لعميل</p>
+                                                    <a href="{{ route('client.index') }}">
+                                                        <p>اضافة عملاء</p>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="{{ route('client.index') }}">
-                                                        <p>اضافة عملاء</p>
+                                                    <a href="{{ route('cl.index') }}">
+                                                        <p>تخصيص تحليل لعميل</p>
                                                     </a>
                                                 </li>
                                             </ul>
@@ -329,17 +331,17 @@
                                 </a>
                                 <div class="collapse" id="base3">
                                     <ul class="nav nav-collapse">
-                                        <li >
-                                            <a href="{{ route('group-test.index') }}">
-                                                <i class="fa fa-flask"></i>
-                                                <p> مجموعات التحاليل</p>
-                                                {{-- <span class="caret"></span> --}}
-                                            </a>
-                                        </li>
                                         <li>
                                             <a href="{{ route('lab_tests.index') }}">
                                                 <i class="fa fa-flask"></i>
                                                 <p>بيانات التحاليل</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ route('group-test.index') }}">
+                                                <i class="fa fa-flask"></i>
+                                                <p> مجموعات التحاليل</p>
+                                                {{-- <span class="caret"></span> --}}
                                             </a>
                                         </li>
                                     </ul>
@@ -361,17 +363,17 @@
                             <li class="nav-item p-2">
                                 <a href="{{ route('ho') }}">
                                    
-                                    <p> صفحة الدخول</p>
+                                    <p> القائمة الرئيسية</p>
                                 
                                 </a>
                             </li>
-                            <li class="nav-item p-2">
+                            {{-- <li class="nav-item p-2">
                                 <a href="{{ route('about') }}">
                                    
                                     <p> حول النظام</p>
                                 
                                 </a>
-                            </li>
+                            </li> --}}
                         @endif
                     </ul>
                 </div>

@@ -52,7 +52,8 @@ class ClientGroupTestController extends Controller
             if (count($tests)) {
                 $cgt = ClientGroupTest::create([
                     'client_id' => $request->input('client_id'),
-                    "group_id" => $val
+                    "group_id" => $val,
+                    'day'=>date("Y-m-d")
                 ]);
 
                 foreach ($tests as $value) {
@@ -138,5 +139,19 @@ class ClientGroupTestController extends Controller
             'status' => 0
         ]);
         return redirect()->route('cl.notfinish');
+    }
+
+    function check(Request $request){
+        // foreach($request->group_id as $val)
+        $result = ClientGroupTest::whereIn('group_id',$request->group_id)->where(['client_id'=>$request->client_id,'day'=>date('Y-m-d')])->get();
+        if(count($result) > 0){
+            $names = '';
+            foreach($result as $val){
+                $names .=" ". GroupTest::find($val->group_id)->name;
+            } 
+            return response()->json(['status'=>true,'data'=>$names]);
+        }else{
+            return response()->json(['status'=>false]);
+        }
     }
 }

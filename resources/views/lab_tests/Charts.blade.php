@@ -5,7 +5,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                <div class="card-title"> تقرير حول عدد التحاليل المنجزة هذا الشهر</div>
+                <div class="card-title">التحاليل التي تم انجازها خلال هذا الشهر </div>
             </div>
             <div class="card-body">
                 <div class="chart-container">
@@ -17,7 +17,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                <div class="card-title"> تقرير حول اسعار التحاليل المنجزة هذا الشهر</div>
+                <div class="card-title"> نسبة ارباح اكثر تحليل تم انجازه خلال هذا الشهر </div>
             </div>
             <div class="card-body">
                 <div class="chart-container">

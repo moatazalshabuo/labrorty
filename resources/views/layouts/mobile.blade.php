@@ -139,7 +139,7 @@ font-family: 'Droid Arabic Kufi', serif;
             <div class="logo-header">
         
                 <a href="index.html" class="logo text-white">
-                    <b>مختبر البشرى</b>
+                    <b>مختبر الطبي</b>
                                     </a>
                 <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse"
                     data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
