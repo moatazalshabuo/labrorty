@@ -138,10 +138,10 @@
             <span class="m-3">{{$item->name}} <span class="badge badge-success">{{$item->price}}</span>: سعر - </span>
         @endforeach      
     </marquee> --}}
-    <marquee direction='right' class="bg-white p-3 position-absolute" style="bottom: 0px" >
+    {{-- <marquee direction='right' class="bg-white p-3 position-absolute" style="bottom: 0px" >
         المختبر الطبي التشخيصي هو مخُتبر في مدينة سبها يقوم عادة بإجراء الفحوص على العينات السريرية للحصول على معلومات عن صحة المريض كجزء من التشخيص والعلاج والوقاية من الأمراض. 
 في هذا التطبيق يُمكنك استلام نتائج التحاليل عن بُعد ورياحية ، بالاظافة اللى انه يُمكّنك من التواصل مع احد موظفي المخُتبر بواسطة الاستشاره الطبيه للأستفسار عن شيء معُين .
-    </marquee>
+    </marquee> --}}
     <script src="{{ URL::asset('assets/js/core/jquery.3.2.1.min.js') }}"></script>
     <script>
         $(function() {

@@ -82,9 +82,11 @@
                         <select class="form-control select2 @error('password') is-invalid @enderror" id="permission"
                             name="permission" >
                             @foreach ($permission as $item)
-                                <option @selected($item->name == $ourpermission) value="{{ $item->name }}">
-                                    {{ $item->name }}
-                                </option>
+                                @if ($item->name != 'الفني')    
+                                    <option @selected($item->name == $ourpermission) value="{{ $item->name }}">
+                                        {{ $item->name }}
+                                    </option>
+                                @endif
                             @endforeach
                         </select>
                         @error('permission')
