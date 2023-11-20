@@ -101,7 +101,7 @@
 </head>
 
 <body
-    style="background-image: url({{ asset('assets/img/fff.JPEG') }});background-size: cover;background-repeat: no-repeat;">
+    style="background-image: url({{ asset('assets/img/fff.JPEG') }});background-size: cover;">
     <div id="preloader">
         <div id="loader"></div>
     </div>

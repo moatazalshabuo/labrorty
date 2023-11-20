@@ -67,7 +67,6 @@
 
                     <div class="form-group">
                         <label for="password-confirm" class="col-form-label text-md-end">تاكيد كلمة المرور</label>
-
                         <div class="">
                             <input id="password-confirm" type="password" class="form-control"
                                 name="password_confirmation" placeholder="تاكيد كلمة المرور"
