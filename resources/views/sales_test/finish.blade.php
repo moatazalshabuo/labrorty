@@ -26,10 +26,10 @@
                                         <td>{{ $key + 1 }}</td>
                                         <td>{{ $item->client->name }}</td>
                                         <td>{{ $item->group->name }}</td>
-                                        <td>{{ $item->group->price }}</td>
+                                        {{-- <td>{{ $item->group->price }}</td> --}}
                                         <td>
                                             <a href="{{ route('cl.show',$item->id) }}" class="btn btn-warning">تعديل النتائج</a>
-                                            <a href="{{ route('cl.cancel',$item->id) }}" class="btn btn-danger">نتيجة غير مكتملة</a>
+                                            {{-- <a href="{{ route('cl.cancel',$item->id) }}" class="btn btn-danger">نتيجة غير مكتملة</a> --}}
                                         </td>
                                         <td class="d-flex">
                                             <form action="{{ route('cl.destroy', $item->id) }}" method="post"
@@ -37,7 +37,8 @@
                                                 @method('DELETE')
                                                 @csrf
                                                 <button class="btn btn-danger text-white delete" type="submit"
-                                                    data-id="{{ $item->id }}"><i class="fa fa-trash"></i></button>
+                                                    data-id="{{ $item->id }}"><i class="fa fa-trash"></i>
+                                                </button>
                                             </form>
                                         </td>
                                     </tr>
