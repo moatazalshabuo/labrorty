@@ -124,7 +124,7 @@ class ClientGroupTestController extends Controller
         ClientGroupTest::find($cgt)->update([
             'status' => 1
         ]);
-        return redirect()->route('cl.finish');
+        return redirect()->route('cl.finish')->with('success',"تم اضافة النتيجة بنجاح");
     }
     public function cancel($cgt)
     {
@@ -153,5 +153,12 @@ class ClientGroupTestController extends Controller
         }else{
             return response()->json(['status'=>false]);
         }
+    }
+
+    public function client_test($id)
+    {
+        // echo "2";
+        $client_group = ClientGroupTest::with('group')->with('client')->where('client_id', $id)->get();
+        return view("sales_test/clint-test", compact("client_group"));
     }
 }

@@ -44,12 +44,9 @@ class ClientController extends Controller
         return redirect()->back()->with(["success"=>"تم الحفظ بنجاح","client_id"=>$client->id]);
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show(Client $client)
     {
-        //
+
     }
 
     /**

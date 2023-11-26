@@ -16,6 +16,8 @@
                                     <th class="border-bottom-0">العميل</th>
                                     <th class="border-bottom-0">التحاليل</th>
                                     <th class="border-bottom-0">السعر</th>
+                                    <th class="border-bottom-0">تاريخ التحليل</th>
+                                    <th>حالة التحليل</th>
                                     <th>النتائج</th>
                                     <th>التحكم</th>
                                 </tr>
@@ -27,7 +29,9 @@
                                         <td>{{ $item->client->name }}</td>
                                         <td>{{ $item->group->name }}</td>
                                         <td>{{ $item->group->price }}</td>
-                                        <td><a href="{{ route('cl.show',$item->id) }}" class="btn btn-primary">اضافة نتيجة</a></td>
+                                        <td>{{ $item->created_at }}</td>
+                                        <td>@if($item->status) مكتمل @else قيد العمل @endif</td>
+                                        <td><a href="{{ route('cl.show',$item->id) }}" class="btn btn-primary">عرض نتيجة</a></td>
                                         <td class="d-flex">
                                             <form action="{{ route('cl.destroy', $item->id) }}" method="post"
                                                 id="delete-user-{{ $item->id }}">

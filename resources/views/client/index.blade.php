@@ -31,15 +31,13 @@
                                 @foreach ($clients as $key => $item)
                                     <tr>
                                         <td>{{ $key + 1 }}</td>
-                                        <td>{{ $item->name }}</td>
+                                        <td><a href="{{ route('client_test',$item->id) }}">{{ $item->name }} </a></td>
                                         <td>{{ $item->phone }}</td>
                                         <td>{{ $item->address }}</td>
                                         <td class="d-flex">
-
                                             <a href="{{ route('client.edit', $item->id) }}"
                                                 class="btn btn-warning text-white">
                                                 <i class="fa fa-edit"></i></a>
-
                                             <form action="{{ route('client.destroy', $item->id) }}" method="post"
                                                 id="delete-user-{{ $item->id }}">
                                                 @method('DELETE')
@@ -73,13 +71,11 @@
                         @csrf
                         <div class="form-group">
                             <label for="name" class="col-form-label text-md-end">اسم</label>
-
                             <div class="">
                                 <input id="name" type="text"
                                     class="form-control @error('name') is-invalid @enderror" name="name"
                                     placeholder="اسم " value="{{ old('name') }}" required autocomplete="name"
                                     autofocus>
-
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -131,14 +127,12 @@
     <script>
         $(function() {
             $("#user-table").DataTable();
-
             function senddata() {
                 $("#form-client").submit();
             }
             @if ($errors->any())
             $('#exampleModal').modal('show')
             @endif
-        
         })
     </script>
 @endsection

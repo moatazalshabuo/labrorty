@@ -67,7 +67,8 @@ Route::controller(ClientGroupTestController::class)->group(function () {
         Route::get('/notfinish', 'notfinish')->name('cl.notfinish');
         Route::get("cancel/{cgt}", "cancel")->name("cl.cancel");
         Route::post('update-result/{cgt}', "update_result")->name('cll.update.result');
-        Route::post('check','check')->name('check');
+        Route::post('check', 'check')->name('check');
+        Route::get('client_test/{id}','client_test')->name('client_test');
     })->middleware('auth');
 });
 

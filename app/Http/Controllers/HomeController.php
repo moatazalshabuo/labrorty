@@ -40,29 +40,45 @@ class HomeController extends Controller
         return view('home',compact('cusers','cclient',"cgroup","cfinish","cnotfinish",'client_group'));
     }
 
-    public function get_charts(){
+    public function get_charts(Request $request){
+        $start = $request->start;
+        $end = request('end');
 
-                    $get = ClientGroupTest::select(DB::raw('min(client_group_tests.day) as day')
-                    ,DB::raw('COUNT(client_group_tests.id) AS total_analysis'),
-                    DB::raw('min(group_tests.name) as name')
-                    )
-                    ->join("group_tests", "group_tests.id", "=", "client_group_tests.group_id")
-                    ->whereBetween('client_group_tests.day',[date("Y-m-1"),date(('Y-m-t'))])
-                    ->groupBy(['name'])->get();
-                //    foreach($get as $val){
-                //     echo $val->day.' '.$val->name .' '.$val->total_analysis.'<br>';
-                //    }
-                return response()->json($get);
+
+        if($start == null){
+            $start = date("Y-m-1");
+        }
+        if($end == null){
+            $end = date('Y-m-t');
+        }
+        $get = ClientGroupTest::select(DB::raw('min(client_group_tests.day) as day')
+        ,DB::raw('COUNT(client_group_tests.id) AS total_analysis'),
+        DB::raw('min(group_tests.name) as name')
+        )
+        ->join("group_tests", "group_tests.id", "=", "client_group_tests.group_id")
+        ->whereBetween('client_group_tests.day',[$start,$end])
+        ->groupBy(['name'])->get();
+    //    foreach($get as $val){
+    //     echo $val->day.' '.$val->name .' '.$val->total_analysis.'<br>';
+    //    }
+    return response()->json(['data'=>$get,'start'=>$start,'end'=>$end]);
     }
 
     public function get_g_charts(){
-
+        $start = request('start');
+        $end = request('end');
+        if($start == null){
+            $start = date("Y-m-1");
+        }
+        if($end == null){
+            $end = date('Y-m-t');
+        }
         $get = ClientGroupTest::select(DB::raw('min(client_group_tests.day) as day')
         ,DB::raw('sum(group_tests.price) AS total_analysis'),
         DB::raw('min(group_tests.name) as name')
         )
         ->join("group_tests", "group_tests.id", "=", "client_group_tests.group_id")
-        ->whereBetween('client_group_tests.day',[date("Y-m-1"),date(('Y-m-t'))])
+        ->whereBetween('client_group_tests.day',[$start,$end])
         ->groupBy(['name'])->get();
     //    foreach($get as $val){
     //     echo $val->day.' '.$val->name .' '.$val->total_analysis.'<br>';
