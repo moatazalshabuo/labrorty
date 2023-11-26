@@ -12,7 +12,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                <div class="card-title">التحاليل التي تم انجازها خلال فترة<span class='date'></span> </div>
+                <div class="card-title">التحاليل التي تم انجازها  </div>
             </div>
             <div class="card-body">
                 <div class="chart-container">
@@ -24,7 +24,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                <div class="card-title"> نسبة ارباح اكثر تحليل تم انجازه خلال فترة<span class='date'></span> </div>
+                <div class="card-title"> نسبة ارباح تحليل </div>
             </div>
             <div class="card-body">
                 <div class="chart-container">
@@ -51,7 +51,7 @@
 			data: {
 				labels: data.map(row => row.name),
 				datasets : [{
-					label: "Sales",
+					label:'تحليل',
 					backgroundColor: 'rgb(23, 125, 255)',
 					borderColor: 'rgb(23, 125, 255)',
 					data: data.map(row => row.total_analysis),
@@ -85,7 +85,7 @@
 			data: {
 				labels: data1.map(row => row.name),
 				datasets : [{
-					label: "Sales",
+					label:'تحليل',
 					backgroundColor: 'rgb(23, 125, 255)',
 					borderColor: 'rgb(23, 125, 255)',
 					data: data1.map(row => row.total_analysis),
