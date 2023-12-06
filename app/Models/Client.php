@@ -18,5 +18,4 @@ class Client extends Model
     public function cgt(){
         return $this->hasMany(ClientGroupTest::class);
     }
-
 }
