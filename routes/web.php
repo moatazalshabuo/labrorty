@@ -65,6 +65,7 @@ Route::controller(ClientGroupTestController::class)->group(function () {
     Route::prefix('cll')->group(function () {
         Route::get('/finish', 'finish')->name('cl.finish');
         Route::get('/notfinish', 'notfinish')->name('cl.notfinish');
+        Route::get('/notfinish/{id}', 'notfinish_id')->name('cl.notfinish-id');
         Route::get("cancel/{cgt}", "cancel")->name("cl.cancel");
         Route::post('update-result/{cgt}', "update_result")->name('cll.update.result');
         Route::post('check', 'check')->name('check');

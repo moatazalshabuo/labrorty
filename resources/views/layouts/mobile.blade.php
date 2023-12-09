@@ -138,7 +138,7 @@ font-family: 'Droid Arabic Kufi', serif;
             <!-- Logo Header -->
             <div class="logo-header">
         
-                <a href="index.html" class="logo text-white">
+                <a href="{{ route('mobile') }}" class="logo text-white">
                     <b>مختبر الطبي</b>
                                     </a>
                 <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse"

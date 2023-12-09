@@ -30,8 +30,14 @@ class ClientGroupTestController extends Controller
     public function notfinish()
     {
         // echo "2";
-        $client_group = ClientGroupTest::with('group')->with('client')->where('status', 0)->get();
+        $client_group = ClientGroupTest::select('client_id')->where('status', 0)->groupBy('client_id')->get();
         return view("sales_test/notfinish", compact("client_group"));
+    }
+    public function notfinish_id($id)
+    {
+        // echo "2";
+        $client_group = ClientGroupTest::where(['status'=> 0,'client_id'=>$id])->get();
+        return view("sales_test/notfinish_client", compact("client_group"));
     }
     /**
      * Show the form for creating a new resource.
