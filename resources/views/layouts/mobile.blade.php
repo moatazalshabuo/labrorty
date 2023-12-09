@@ -205,7 +205,7 @@ font-family: 'Droid Arabic Kufi', serif;
                             <li class="nav-item">
                                 <a href="/home">
                                    
-                                    <p> صفحة الدخول</p>
+                                    <p> القائمة الرئيسية</p>
                                    
                                 </a>
                             </li>

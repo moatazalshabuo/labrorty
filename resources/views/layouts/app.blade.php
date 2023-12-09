@@ -207,7 +207,7 @@
                                     <li>
                                         <form method="POST" action="{{ route('logout') }}">
                                             @csrf
-                                            <button type="submit" class="btn btn-primary">Logout</button>
+                                            <button type="submit" class="btn btn-danger">الخروج</button>
                                         </form>
                                     </li>
                                 </ul>
