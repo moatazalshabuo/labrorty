@@ -134,7 +134,7 @@ font-family: 'Droid Arabic Kufi', serif;
   @yield('header')
  
         @isset(session()->get('client')->name)
-        <div class="main-header" data-background-color="purple">
+        <div id="sidebar"  class="main-header" data-background-color="purple">
             <!-- Logo Header -->
             <div class="logo-header">
         
@@ -157,8 +157,8 @@ font-family: 'Droid Arabic Kufi', serif;
             <!-- End Logo Header -->
         </div>
             <!-- Sidebar -->
-            <div class="sidebar">
-
+            <div id="sidebar" class="sidebar">
+                
                 <div class="sidebar-background"></div>
                 <div class="sidebar-wrapper scrollbar-inner">
                     <div class="sidebar-content">
@@ -215,6 +215,9 @@ font-family: 'Droid Arabic Kufi', serif;
                                     <p> حول النظام</p>
                                 
                                 </a>
+                            </li>
+                            <li class="nav-item">
+                            <button onclick="printPage()" style="display: block; margin: 20px auto;" class="btn">طباعة نتيجةالتحليل</button>
                             </li>
                             {{-- <li class="nav-item ">
                                 <a href="{{ route('home') }}">

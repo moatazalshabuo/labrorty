@@ -273,24 +273,13 @@
                                    
                                     <li class="nav-item">
                                         <a data-toggle="collapse" href="#base2">
-                                          
-                                            <p> ادارة العملاء</p>
-                                            <span class="caret"></span>
-                                        </a>
-                                        <div class="collapse" id="base2">
-                                            <ul class="nav nav-collapse">
-                                                <li>
-                                                    <a href="{{ route('client.index') }}">
-                                                        <p>اضافة عملاء</p>
-                                                    </a>
-                                                </li>
-                                                {{-- <li>
-                                                    <a href="{{ route('cl.index') }}">
-                                                        <p>تخصيص تحليل لعميل</p>
-                                                    </a>
-                                                </li> --}}
-                                            </ul>
-                                        </div>
+                                            <a href="{{ route('client.index') }}">
+                                                <p> ادارة العملاء</p>     
+                                            </a>
+                                            
+                                            
+                                        {{-- </a> --}}
+                                      
                                 </ul>
                             </div>
                         </li>

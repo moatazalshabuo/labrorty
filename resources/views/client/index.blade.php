@@ -22,7 +22,7 @@
                                     <th></th>
                                     <th class="border-bottom-0">الاسم</th>
                                     <th class="border-bottom-0">رقم الهاتف</th>
-                                    <th class="border-bottom-0">الموقع</th>
+                                    <th class="border-bottom-0">العمر</th>
                                     <th class="border-bottom-0">التحكم</th>
 
                                 </tr>
@@ -110,8 +110,8 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>موقع السكن </label>
-                            <input type="text" name="address" class="form-control">
+                            <label>العمر </label>
+                            <input type="number" name="address" class="form-control">
                         </div>
                         <button type="submit" class="btn btn-primary">حفظ البيانات</button>
                     </form>
